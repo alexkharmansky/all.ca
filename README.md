@@ -1,21 +1,27 @@
 # test
 
 v2.4
+<br>
 index.html, style.sass:
 - cleaned junk like useless comments and properties
 
 v2.3
+<br>
 index.html, style.sass:
 - fixed paddings
 
+v2.2
+<br>
 index.html, style.sass:
 - fixed some margins here and there
 
 v2.1
+<br>
 index.html, style.sass:
 - minor fixes
 
 v2
+<br>
 index.html, style.sass, burger-menu.js:
 - added burger menu
 - fixed 'main' and 'support' sections with flexbox
