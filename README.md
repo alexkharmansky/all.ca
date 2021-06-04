@@ -26,6 +26,7 @@ index.html, style.sass, burger-menu.js:
 - added burger menu
 - fixed 'main' and 'support' sections with flexbox
 - fixed 'domains' section—now available on mobile devices
+- added responsive support for 4k displays
 
 search_results.html, style.sass:
 - reworked 'search results' table: instead of using fixed blocks with negative margins used an html table
