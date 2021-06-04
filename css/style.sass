@@ -69,35 +69,6 @@ ul li
 img
     vertical-align: top
 
-// bootstrap
-.btn, .btn-primary
-    &:disabled
-        background-color: #fff !important
-        color: $textColor !important
-        border: 1px solid $btnColor !important
-        outline: none !important
-        border: none !important
-        box-shadow: none !important
-    &:focus
-        background-color: #fff !important
-        color: $textColor !important
-        border: 1px solid $btnColor !important
-        outline: none !important
-        box-shadow: none !important
-    &:before
-        background-color: #fff !important
-        color: $textColor !important
-        border: 1px solid $btnColor !important
-        outline: none !important
-        box-shadow: none !important
-    &:after
-        background-color: #fff !important
-        color: $textColor !important
-        border: 1px solid $btnColor !important
-        outline: none !important
-        box-shadow: none !important
-
-
 ///////////////////////////////////////////////////////////////////////////
 
 // —— site ——
@@ -175,7 +146,6 @@ body
         padding: 0
         text-align: center
         flex: 1 1 auto
-        transform: translateY(-8%)
 
         li 
             width: 100vw
@@ -353,6 +323,7 @@ body
             width: 100%
         @media screen and (max-width: 372px)
             font-size: 52px
+            
 
     &__title2
         margin-top: 22px
@@ -447,7 +418,7 @@ body
             text-align: center
             margin-top: 30px
         @media screen and (max-width: 567px)
-            margin-top: 50px
+            margin-top: 80px
         @media screen and (max-width: 432px)
             width: 100%
 
@@ -486,10 +457,12 @@ body
         @media screen and (max-width: 576px)
             margin-left: 0
             
-            
         &:hover
             margin-top: -5px
             box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.349)
+            @media screen and (max-width: 567px)
+                margin-top: 0
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05)
     
     &__row
         flex-direction: row
@@ -594,7 +567,6 @@ body
         line-height: 27px
         font-weight: 400
         @media screen and (max-width: 576px)
-            font-size: 15px
             width: 100%
 
     &__text2
@@ -616,6 +588,7 @@ body
         margin-top: 100px
         @media screen and (max-width: 576px)
             width: 100%
+            margin-top: 30px
 
 // features
 .features
@@ -631,11 +604,14 @@ body
         font-size: 18px
         color: $altColor
         text-transform: uppercase
+        
 
     &__title2
         font-weight: 300
         font-size: 36px
         margin-top: 20px
+        @media screen and (max-width: 576px)
+            line-height: 48px
     
     &__row
         margin-top: 80px
