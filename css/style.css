@@ -431,9 +431,6 @@ body {
   font-weight: 700;
   color: #CC0000;
   display: inline-block;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
 }
 
 @media screen and (max-width: 2560px) {
@@ -1061,14 +1058,12 @@ body {
 @media screen and (max-width: 1160px) {
   .support {
     background-size: 550px 383px;
-    margin-top: 0px;
   }
 }
 
 @media screen and (max-width: 991px) {
   .support {
     background: none;
-    margin-top: 0;
     padding: 0px 0px 60px 0px;
   }
 }
@@ -1113,7 +1108,6 @@ body {
 
 @media screen and (max-width: 991px) {
   .support__row {
-    padding: 0px 0px 0px 0px;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -1139,9 +1133,6 @@ body {
   line-height: 27px;
   font-size: 18px;
   display: inline-block;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
   width: 420px;
 }
 
