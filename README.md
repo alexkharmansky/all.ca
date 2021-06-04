@@ -1,5 +1,10 @@
 # test
 
+v2.5
+<br>
+style.sass:
+- removed useless properties
+
 v2.4
 <br>
 index.html, style.sass:
