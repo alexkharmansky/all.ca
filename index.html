@@ -25,6 +25,23 @@
 
     <!-- header -->
     <header class="header">
+
+        <a href="#menu" class="burger-menu__link">
+            <span></span>
+        </a>
+        
+        <div class="header__burger-menu burger-menu" id="list">
+            <ul class="burger-menu__list">
+                <li class="burger-menu__items"><a onclick="comingSoon();"  href="#">Home</a></li>
+                <li class="burger-menu__items"><a onclick="comingSoon();"  href="#">.CA Registration</a></li>
+                <li class="burger-menu__items"><a onclick="comingSoon();"  href="#">Transfers</a></li>
+                <li class="burger-menu__items"><a onclick="comingSoon();"  href="#">TLDs</a></li>
+                <li class="burger-menu__items"><a onclick="comingSoon();"  href="#">Support</a></li>
+                <li class="burger-menu__items"><a onclick="comingSoon();"  href="#">About</a></li>
+                <li class="burger-menu__items"><button class="burger-menu__btn" onclick="comingSoon();">Sign In / Register</button></li>
+            </ul>
+        </div>
+
         <div class="container header__container">
             <div class="row">
 
@@ -74,18 +91,16 @@
     <!-- main -->
     <section class="main">
         <div class="container">
-            <div class="row">
-                <div class="col-xl-8 col-sm-12">
-                    <h1 class="main__title">Choose to be Canadian</h1>
-                    <h3 class="main__title2">Register .CA</h3>
-                    <div class="main__input input">
-                        <input class="input__field" type="text" placeholder="Start here by typing a domain name or a keyword">
-                        <button class="input__btn" onclick="comingSoon();"><i class="input__icon fa fa-search"></i><p class="input__btn-text">Search Domains</p></button>
-                    </div>
-                    <p class="main__text">
-                        We are the Canadian Internet Registration Authority. We manage .CA domains on behalf of all Canadians and work every day to build a better online Canada.
-                    </p>
+            <div class="main__row">
+                <h1 class="main__title">Choose to be Canadian</h1>
+                <h3 class="main__title2">Register .CA</h3>
+                <div class="main__input input">
+                    <input class="input__field" type="text" placeholder="Start here by typing a domain name or a keyword">
+                    <button class="input__btn" onclick="comingSoon();"><i class="input__icon fa fa-search"></i><p class="input__btn-text">Search Domains</p></button>
                 </div>
+                <p class="main__text">
+                    We are the Canadian Internet Registration Authority. We manage .CA domains on behalf of all Canadians and work every day to build a better online Canada.
+                </p>
             </div>
         </div>
     </section>
@@ -96,84 +111,84 @@
             <h1 class="domains__title">Popular Domain Name Promos & Offers</h1>
             <h3 class="domains__title2">Register cheap domains at the best prices you can find on the internet</h3>
             <div class="row domains__row">
-                <div class="col-lg-2 col-md-4 col-sm-4 col-3 domains__columns">
+                <div class="col-lg-2 col-md-3 col-sm-3 col-4 domains__columns">
                     <div onclick="comingSoon();" class="domains__name name">
                         <span class="name__label">Popular</span>
                         <h1 class="name__title">.com</h1>
                         <h3 class="name__price">$8.49</h3>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-4 col-sm-4 col-3 domains__columns">
+                <div class="col-lg-2 col-md-3 col-sm-3 col-4 domains__columns">
                     <div onclick="comingSoon();" class="domains__name name">
                         <span class="name__label">New</span>
                         <h1 class="name__title">.net</h1>
                         <h3 class="name__price">$8.49</h3>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-4 col-sm-4 col-3 domains__columns">
+                <div class="col-lg-2 col-md-3 col-sm-3 col-4 domains__columns">
                     <div onclick="comingSoon();" class="domains__name name">
                         <span class="name__label name__label_es">Ending Soon</span>
                         <h1 class="name__title">.xyz</h1>
                         <h3 class="name__price">$8.49</h3>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-4 col-sm-4 col-xs-6 d-none d-sm-block domains__columns">
+                <div class="col-lg-2 col-md-3 col-sm-3 col-4 domains__columns">
                     <div onclick="comingSoon();" class="domains__name name">
                         <h1 class="name__title">.org</h1>
                         <h3 class="name__price">$8.49</h3>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-4 col-sm-4 col-xs-6 d-none d-sm-block domains__columns">
+                <div class="col-lg-2 col-md-3 col-sm-3 col-4 domains__columns">
                     <div onclick="comingSoon();" class="domains__name name">
                         <h1 class="name__title">.art</h1>
                         <h3 class="name__price">$8.49</h3>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-4 col-sm-4 col-xs-6 d-none d-sm-block domains__columns">
+                <div class="col-lg-2 col-md-3 col-sm-3 col-4 domains__columns">
                     <div onclick="comingSoon();" class="domains__name name">
                         <h1 class="name__title">.info</h1>
                         <h3 class="name__price">$8.49</h3>
                     </div>
                 </div>
-            </div>
-            <div class="row domains__row">
-                <div class="col-lg-2 col-md-2 d-none d-lg-block domains__columns">
+            <!-- <div class="row domains__row"> -->
+                <div class="col-lg-2 col-md-3 col-sm-3 col-4 domains__columns">
                     <div onclick="comingSoon();" class="domains__name name">
                         <h1 class="name__title">.fund</h1>
                         <h3 class="name__price">$8.49</h3>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-2 d-none d-lg-block domains__columns">
+                <div class="col-lg-2 col-md-3 col-sm-3 col-4 domains__columns">
                     <div onclick="comingSoon();" class="domains__name name">
                         <h1 class="name__title">.zone</h1>
                         <h3 class="name__price">$8.49</h3>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-2 d-none d-lg-block domains__columns">
+                <div class="col-lg-2 col-md-3 col-sm-3 col-4 domains__columns">
                     <div onclick="comingSoon();" class="domains__name name">
                         <h1 class="name__title">.today</h1>
                         <h3 class="name__price">$8.49</h3>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-2 d-none d-lg-block domains__columns">
+                <div class="col-lg-2 col-md-3 col-sm-3 col-4 domains__columns">
                     <div onclick="comingSoon();" class="domains__name name">
                         <h1 class="name__title">.rocks</h1>
                         <h3 class="name__price">$8.49</h3>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-2 d-none d-lg-block domains__columns">
+                <div class="col-lg-2 col-md-3 col-sm-3 col-4 domains__columns">
                     <div onclick="comingSoon();" class="domains__name name">
                         <h1 class="name__title">.expert</h1>
                         <h3 class="name__price">$8.49</h3>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-2 d-none d-lg-block domains__columns">
+                <div class="col-lg-2 col-md-3 col-sm-3 col-4 domains__columns">
                     <div onclick="comingSoon();" class="domains__name name">
                         <h1 class="name__title">.city</h1>
                         <h3 class="name__price">$8.49</h3>
                     </div>
                 </div>
             </div>
+            <!-- </div> -->
             <a href="#" onclick="comingSoon();" class="domains__link">View All Domain Extensions <i class="fa fa-angle-right"></i></a>  
         </div>
     </section>
@@ -231,11 +246,9 @@
     <!-- support -->
     <section class="support">
         <div class="container">
-            <div class="row">
-                <div class="col-xl-5 col-md-12">
-                    <h4 class="support__title">Unparalleled Personal Support</h4>
-                    <p class="support__text">When you contact us, you get quick and direct access to our knowledgable staff with no long hold times. Get the answers you want without the hassle!</p>
-                </div>
+            <div class="support__row">
+                <h4 class="support__title">Unparalleled Personal Support</h4>
+                <p class="support__text">When you contact us, you get quick and direct access to our knowledgable staff with no long hold times. Get the answers you want without the hassle!</p>
             </div>
         </div>
     </section>
@@ -374,6 +387,7 @@
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/jquery.mousewheel.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/burger-menu.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

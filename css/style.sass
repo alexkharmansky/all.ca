@@ -107,8 +107,102 @@ body
     font-family: $Roboto
     color: $textColor
 
+.burger-menu 
+    &__link
+        display: none
+        @media screen and (max-width: 655px)    
+            z-index: 9
+            display: block
+            width: 50px
+            height: 33px
+            position: fixed
+            right: 20px
+            top: 20px
+            transition: all 0.3s
+            float: right
+            &:hover 
+                opacity: .9
+        
+            span, span:before, span:after 
+                display: block
+                height: 2px
+                width: 18px
+                background-color: #000
+                position: absolute
+                left: 50%
+                margin-left: -9px
+                top: 50%
+                margin-top: -1px
+            
+            span
+                &:before 
+                    transition: all 0.2s
+                    content: ''
+                    margin-top: -6px
+            
+                &:after 
+                    transition: all 0.2s
+                    content: ''
+                    margin-top: 4px
+
+            &_active span 
+                background-color: transparent
+                
+                &:before 
+                    transform: rotate(135deg)
+                    margin-top: 0
+                
+                &:after
+                    transform: rotate(-135deg)
+                    margin-top: 0
+
+    z-index: 1
+    background-color: #fff
+    position: fixed
+    width: 100vw
+    height: 100vh
+    display: flex
+    align-items: center
+    justify-content: center
+    left: -100vw
+    transition: all 0.5s
+
+    &_active 
+        left: 0
+
+    ul 
+        list-style: none
+        padding: 0
+        text-align: center
+
+        li 
+            width: 100vw
+        
+        a 
+            display: block
+            width: 100%
+            line-height: 80px
+            color: $textColor
+            transition: all 0.3s
+            font-size: 2rem
+            &:hover 
+                text-decoration: none
+                background-color: #7e7e7e66
+    
+    &__btn
+        font-weight: 500
+        font-size: 14px
+        display: inline-block
+        border: 1px solid $btnColor
+        text-align: center
+        background-color: #fff
+        padding: 15px 20px 15px 20px
+        border-radius: 4px
+        margin-top: 10px
+
 .header
     height: 70px
+    margin-bottom: 40px
     z-index: 997
     @media screen and (max-width: 768px)
         position: fixed
@@ -152,10 +246,9 @@ body
             margin-top: 20px
         @media screen and (max-width: 767px)
             margin-left: 30px
-        @media screen and (max-width: 567px)
-            margin: 0
+        @media screen and (max-width: 655px)
+            display: none
             
-
 .logo
     &__image
         margin-top: 19px
@@ -204,39 +297,56 @@ body
 
 // main
 .main
-    margin-top: 46px
-    height: 623px
-    background: url("../img/main__bg.jpg") no-repeat right
-    background-size: 752px 623px
-    @media screen and (max-width: 1215px)
-        background-size: 652px 523px
-    @media screen and (max-width: 1160px)
-        background-size: 552px 463px
-        margin-top: 0px
+    @media screen and (max-width: 1920px)
+        padding: 120px 0px 120px 0px
+        background: url("../img/main__bg.jpg") no-repeat right
+        background-size: auto 100%
+    @media screen and (max-width: 1397px)
+        padding: 40px 0px 40px 0px
+        background-size: 652px auto
+    @media screen and (max-width: 1199px)
+        background-size: 552px auto
+        padding: 5px 0px 5px 0px
     @media screen and (max-width: 991px)
         background: none
     @media screen and (max-width: 768px)
         text-align: center
 
+    &__row
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: left
+        @media screen and (max-width: 2560px)
+            background: url("../img/main__bg.jpg") no-repeat right
+            background-size: 752px auto
+            padding: 0px 0px 80px 0px
+        @media screen and (max-width: 1920px)
+            background: none
+            padding: 0
+        @media screen and (max-width: 768px)
+            align-items: center
+
     &__title
-        margin-top: 130px
         font-size: 70px
         font-weight: 700
         color: $altColor
         display: inline-block
-        @media screen and (max-width: 1650px)
+        flex: 1 1 auto
+        @media screen and (max-width: 2560px)
             width: 500px
-            margin-top: 100px
-        @media screen and (max-width: 1215px)
-            margin-top: 50px
+            margin-top: 80px
+        @media screen and (max-width: 1920px)
+            width: 100%
+            margin: 0
+        @media screen and (max-width: 1690px)
+            width: 500px
         @media screen and (max-width: 1200px)
             font-size: 60px
-            margin-top: 80px
         @media screen and (max-width: 991px)
             width: 100%
         @media screen and (max-width: 768px)
-            margin-top: 200px
-            width: 400px
+            margin-top: 100px
         @media screen and (max-width: 432px)
             width: 100%
         @media screen and (max-width: 372px)
@@ -246,20 +356,20 @@ body
         margin-top: 22px
         font-weight: 700
         font-size: 40px
+        flex: 1 1 auto
 
     &__text
         display: block
-        width: 445px
+        width: 435px
         margin-top: 46px
         font-size: 18px
         line-height: 27px
-        @media screen and (max-width: 1280px)
-            width: 400px
+        flex: 1 1 auto
         @media screen and (max-width: 991px)
             width: 100%
         @media screen and (max-width: 768px)
-            width: 400px
             display: inline-block
+            width: 400px
             text-align: center
         @media screen and (max-width: 432px)
             width: 100%
@@ -278,6 +388,7 @@ body
         padding-left: 16px
         border-radius: 5px
         border: 1px solid #CECECE
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.05)
         outline: none
         color: #464646
         margin: 0
@@ -322,22 +433,17 @@ body
 
 // domains
 .domains
-    height: 672px
     text-align: center
-    @media screen and (max-width: 1280px)
-        height: 500px
 
     &__title
         margin-top: 100px
         font-weight: 700
         font-size: 32px
-        @media screen and (max-width: 1200px)
-            margin-top: 0px
         @media screen and (max-width: 768px)
             display: inline-block
             width: 400px
             text-align: center
-            margin-top: 200px
+            margin-top: 30px
         @media screen and (max-width: 432px)
             width: 100%
 
@@ -371,25 +477,28 @@ body
             width: 110px
             height: 90px
         @media screen and (max-width: 767px)
-            margin-left: -13px
+            width: 90px
+            height: 80px
         @media screen and (max-width: 576px)
             margin-left: 0
-        @media screen and (max-width: 510px)
-            display: none
+            
             
         &:hover
             margin-top: -5px
             box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.349)
     
     &__row
-        margin-left: 65px
+        flex-direction: row
+        justify-content: center
+        align-items: center
 
     &__columns
         margin: 0
-        margin-right: -18px
         @media screen and (max-width: 576px)
-            margin-right: 0
-            margin-right: 20px
+            display: inline-flex
+            align-items: center
+            justify-content: center
+            text-align: center
     
     &__link
         font-size: 16px
@@ -416,6 +525,8 @@ body
             font-size: 8px
             padding-top: 7px
             margin-top: 2px
+        @media screen and (max-width: 767px)
+            width: 50px
         &_es
             width: 77px
 
@@ -428,6 +539,8 @@ body
         @media screen and (max-width: 1200px)
             font-size: 18px
             margin-top: 20px
+        @media screen and (max-width: 767px)
+            font-size: 16px
 
     &__price
         margin: 0
@@ -436,19 +549,22 @@ body
         font-weight: 400
         @media screen and (max-width: 1400px)
             font-size: 16px
+        @media screen and (max-width: 767px)
+            font-size: 13px
 
 // about
 .about
     text-align: center
+    margin-top: 80px
+    @media screen and (max-width: 768px)
+        margin-top: 0
 
     &__img
         width: 60px
         display: inline-block
         text-align: center
         @media screen and (max-width: 768px)
-            margin-top: 200px
-        @media screen and (max-width: 510px)
-            margin-top: 0
+            margin-top: 100px
     
     &__title
         font-size: 52px
@@ -503,6 +619,7 @@ body
     margin-top: 100px
     padding: 80px 0 80px 0
     text-align: center
+    margin-bottom: 70px
 
     &__title
         font-weight: 700
@@ -535,52 +652,63 @@ body
 
 //support
 .support
-    margin-top: 100px
-    height: 623px
-    background: url("../img/support__img.jpg") no-repeat right
-    background-size: 800px 543px
+    @media screen and (max-width: 1920px)
+        background: url("../img/support__img.jpg") no-repeat right
+        background-size: 800px auto
+        padding: 230px 0px 230px 0px
     @media screen and (max-width: 1370px)
-        background-size: 750px 513px
+        background-size: 750px auto
     @media screen and (max-width: 1280px)
         background-size: 650px 443px
-    // @media screen and (max-width: 1200px)
-    //     background-size: 650px 443px
+        padding: 180px 0px 180px 0px
     @media screen and (max-width: 1160px)
         background-size: 550px 383px
         margin-top: 0px
     @media screen and (max-width: 991px)
         background: none
         margin-top: 0
-        height: 300px
+        padding: 0px 0px 60px 0px
+
+    &__row
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: left
+        @media screen and (max-width: 2560px)
+            background: url("../img/support__img.jpg") no-repeat right
+            background-size: 800px auto
+            padding: 230px 0px 230px 0px
+        @media screen and (max-width: 1920px)
+            background: none
+            padding: 0
+        @media screen and (max-width: 991px)
+            padding: 0px 0px 0px 0px
+            align-items: center
 
     &__title
         font-weight: 700
         font-size: 22px
-        margin-top: 230px
-        @media screen and (max-width: 1280px)
-            // text-align: center
-        @media screen and (max-width: 1280px)
-            margin-top: 200px
-        @media screen and (max-width: 991px)
-            margin-top: 80px
-            text-align: center
+        flex: 1 1 auto
         @media screen and (max-width: 370px)
             margin-top: 20px
     &__text
         font-weight: 400
         line-height: 27px
         font-size: 18px
-        display: block
+        display: inline-block
+        flex: 1 1 auto
+        width: 420px
         @media screen and (max-width: 1280px)
             width: 400px
             margin-top: 20px
         @media screen and (max-width: 991px)
-            text-align: center
-            display: inline
+            text-align: left
+        @media screen and (max-width: 576px)
+            width: 100%
 
 // reviews
 .reviews
-    margin-top: 175px
+    margin-top: 85px
     text-align: center
     @media screen and (max-width: 1150px)
         margin-top: 0px
@@ -960,7 +1088,7 @@ input[type=range]::-ms-thumb
             padding-left: 67px
             width: 250px
     &__label
-        margin-left: -50px
+        // margin-left: -50px
         display: inline-block
         float: left
         transform: translateY(50%)
@@ -1001,8 +1129,6 @@ input[type=range]::-ms-thumb
         box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.08)
 
 .results
-    margin-left: -50px
-
     &__title
         text-transform: uppercase
         font-weight: 700
@@ -1011,62 +1137,75 @@ input[type=range]::-ms-thumb
         margin-left: 15px
 
     &__line
-        width: 870px
+        width: 100%
         height: 2px
         background-color: #E5EDF8
-        margin-left: -50px
         &_main
             width: 165px
             height: 2px
             background-color: #0D66D0
-            margin-left: -50px
             margin-top: -2px
 
     &__display
         margin-top: 32px
-        margin-left: -50px
         display: inline-block
 
     &__share
         display: inline-block
         float: right
         margin-top: 30px
-        transform: translateX(-40%)
         color: $textColor
         font-size: 12px
         &:hover
             color: $textColor
         &-icon
             margin-right: 10px
-            
-    &__domain-name
-        font-weight: 500
-        font-size: 12px
+
+.table
+    margin-top: 5px
+    width: 100%
+    border-collapse: separate
+    border-spacing: 0 17px
+
+    &__th
         text-transform: uppercase
-        color: #8990A5
-        margin-left: -40px
-        margin-top: 32px
-
-.search-name
-    width: 870px
-    height: 73px
-    border-radius: 4px
-    border: 1px #efefef solid
-    padding: 27px 16px 24px 24px
-    margin-bottom: 16px
-    margin-left: -50px
-
-    &__title
+        border: none
         font-weight: 500
-        font-size: 16px
-        display: inline-block
+        font-size: 11px
+        color: #8990A5
+        &_dn
+            width: 80%
+        &_price
+            width: 10%
+        &_btn
+            width: 10%
 
-    &__price
-        display: inline-block
-        float: right
-        transform: translateX(-280%)
-        font-weight: 700
-        font-size: 18px
+    &__td
+        border: none
+        height: 70px
+        vertical-align: middle
+        border-radius: 4px
+        &:nth-child(1)
+            border: 1px solid #efefef
+            border-top-right-radius: 0
+            border-bottom-right-radius: 0
+            border-right: none
+            font-weight: 500
+            font-size: 16px
+            padding-left: 24px
+        &:nth-child(2)
+            border: 1px solid #efefef
+            border-radius: 0
+            border-right: none
+            border-left: none
+            font-weight: 700
+            font-size: 18px
+        &:nth-child(3)
+            border: 1px solid #efefef
+            border-top-left-radius: 0
+            border-bottom-left-radius: 0
+            border-left: none
+            padding-right: 15px
 
     &__btn
         width: 102px
@@ -1077,8 +1216,6 @@ input[type=range]::-ms-thumb
         border: 1px solid #D8DCE6
         box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.08)
         border-radius: 4px
-        margin-top: -10px
-        margin-right: -40px
 
 .pages
     display: inline-block
@@ -1087,9 +1224,8 @@ input[type=range]::-ms-thumb
     height: 38px
     border-radius: 4px
     border: 1px solid #D8DCE6
-    transform: translateX(-14%)
     padding-left: 2px
-
+    transform: translateY(-7%)
     &__links
         display: inline-block
         margin-top: -16px

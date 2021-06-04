@@ -11,8 +11,6 @@ function comingSoon() {
 //     elem.placeholder = elem.placeholder.replace(/\\n/g, '\n');
 // });
 
-
-
 // owl carousel
 $(document).ready(function(){
     $(".owl-carousel").owlCarousel();
@@ -66,3 +64,11 @@ owl.on('mousewheel', '.owl-stage', function (e) {
     e.preventDefault();
 });
 
+// textarea placeholder SAFARI SURRORT
+
+const ta = document.querySelector('textarea');
+const pp = document.querySelector('.dt-main__placeholder');
+console.log(ta);
+ta.addEventListener('input', () => {
+  pp.classList.toggle('hidden', ta.value !== '');
+});
