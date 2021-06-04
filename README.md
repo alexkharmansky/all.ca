@@ -1,5 +1,10 @@
 # test
 
+v2.6.1
+<br>
+style.sass:
+- fixed burger menu
+
 v2.5
 <br>
 style.sass:
