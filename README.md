@@ -3,7 +3,7 @@
 v3
 <br>
 index.html, style.sass:
-- reworked 'main' and 'support' sections. removed all fixed margins and replaced it with responsive flex elements and percentage padding values
+- reworked 'main' and 'support' sections. removed all fixed margins and replaced them with responsive flex elements and percentage padding values
 
 v2.6.1
 <br>
