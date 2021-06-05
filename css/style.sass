@@ -174,7 +174,6 @@ body
 
 .header
     height: 70px
-    margin-bottom: 40px
     z-index: 997
     @media screen and (max-width: 768px)
         position: fixed
@@ -270,17 +269,19 @@ body
 // main
 .main
     @media screen and (max-width: 1920px)
-        padding: 120px 0px 120px 0px
         background: url("../img/main__bg.jpg") no-repeat right
-        background-size: auto 100%
+        background-size: 753px
+        display: flex
+        flex-direction: column
+        justify-content: center
+        padding: 8% 0 8% 0
     @media screen and (max-width: 1397px)
-        padding: 40px 0px 40px 0px
-        background-size: 652px auto
+        background-size: 652px
     @media screen and (max-width: 1199px)
-        background-size: 552px auto
-        padding: 5px 0px 5px 0px
+        background-size: 552px
     @media screen and (max-width: 991px)
         background: none
+        padding: 8% 0 0 0
     @media screen and (max-width: 768px)
         text-align: center
 
@@ -292,7 +293,7 @@ body
         @media screen and (max-width: 2560px)
             background: url("../img/main__bg.jpg") no-repeat right
             background-size: 752px auto
-            padding: 0px 0px 80px 0px
+            padding: 8% 0 8% 0
         @media screen and (max-width: 1920px)
             background: none
             padding: 0
@@ -306,7 +307,6 @@ body
         display: inline-block
         @media screen and (max-width: 2560px)
             width: 500px
-            margin-top: 80px
         @media screen and (max-width: 1920px)
             width: 100%
             margin: 0
@@ -318,6 +318,8 @@ body
             width: 100%
         @media screen and (max-width: 768px)
             margin-top: 100px
+        @media screen and (max-width: 576px)
+            margin-top: 60px
         @media screen and (max-width: 432px)
             width: 100%
         @media screen and (max-width: 372px)
@@ -328,7 +330,6 @@ body
         margin-top: 22px
         font-weight: 700
         font-size: 40px
-        flex: 1 1 auto
 
     &__text
         display: block
@@ -336,7 +337,6 @@ body
         margin-top: 46px
         font-size: 18px
         line-height: 27px
-        flex: 1 1 auto
         @media screen and (max-width: 991px)
             width: 100%
         @media screen and (max-width: 768px)
@@ -419,7 +419,6 @@ body
             display: inline-block
             width: 400px
             text-align: center
-            margin-top: 30px
         @media screen and (max-width: 567px)
             margin-top: 80px
         @media screen and (max-width: 432px)
@@ -537,7 +536,6 @@ body
 // about
 .about
     text-align: center
-    margin-top: 80px
     @media screen and (max-width: 768px)
         margin-top: 0
     @media screen and (max-width: 576px)
@@ -545,6 +543,7 @@ body
         padding-right: 5px
 
     &__img
+        margin-top: 170px
         width: 60px
         display: inline-block
         text-align: center
@@ -606,6 +605,8 @@ body
     padding: 80px 0 80px 0
     text-align: center
     margin-bottom: 70px
+    @media screen and (max-width: 576px)
+        margin-top: 30px
 
     &__title
         font-weight: 700
@@ -643,18 +644,22 @@ body
 .support
     @media screen and (max-width: 1920px)
         background: url("../img/support__img.jpg") no-repeat right
-        background-size: 800px auto
-        padding: 230px 0px 230px 0px
-    @media screen and (max-width: 1370px)
-        background-size: 750px auto
+        background-size: 800px
+        display: flex
+        flex-direction: column
+        justify-content: center
+        padding: 14% 0 14% 0
+    @media screen and (max-width: 1480px)
+        background-size: 750px
+    @media screen and (max-width: 1360px)
+        background-size: 650px
     @media screen and (max-width: 1280px)
-        background-size: 650px 443px
-        padding: 180px 0px 180px 0px
+        background-size: 650px
     @media screen and (max-width: 1160px)
-        background-size: 550px 383px
+        background-size: 550px
     @media screen and (max-width: 991px)
         background: none
-        padding: 0px 0px 60px 0px
+        padding: 5% 0 15% 0
     @media screen and (max-width: 576px)
         padding-left: 5px
         padding-right: 5px
@@ -667,7 +672,7 @@ body
         @media screen and (max-width: 2560px)
             background: url("../img/support__img.jpg") no-repeat right
             background-size: 800px auto
-            padding: 230px 0px 230px 0px
+            padding: 16% 0 16% 0
         @media screen and (max-width: 1920px)
             background: none
             padding: 0
@@ -677,7 +682,6 @@ body
     &__title
         font-weight: 700
         font-size: 22px
-        flex: 1 1 auto
         @media screen and (max-width: 370px)
             margin-top: 20px
     &__text
@@ -765,6 +769,8 @@ body
     padding-bottom: 45px
     @media screen and (max-width: 991px)
         height: 380px
+    @media screen and (max-width: 576px)
+        margin-top: 30px
     @media screen and (max-width: 532px)
         height: 450px
     @media screen and (max-width: 370px)

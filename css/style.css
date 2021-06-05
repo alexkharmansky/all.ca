@@ -190,7 +190,6 @@ body {
 
 .header {
   height: 70px;
-  margin-bottom: 40px;
   z-index: 997;
 }
 
@@ -355,29 +354,38 @@ body {
 
 @media screen and (max-width: 1920px) {
   .main {
-    padding: 120px 0px 120px 0px;
     background: url("../img/main__bg.jpg") no-repeat right;
-    background-size: auto 100%;
+    background-size: 753px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 8% 0 8% 0;
   }
 }
 
 @media screen and (max-width: 1397px) {
   .main {
-    padding: 40px 0px 40px 0px;
-    background-size: 652px auto;
+    background-size: 652px;
   }
 }
 
 @media screen and (max-width: 1199px) {
   .main {
-    background-size: 552px auto;
-    padding: 5px 0px 5px 0px;
+    background-size: 552px;
   }
 }
 
 @media screen and (max-width: 991px) {
   .main {
     background: none;
+    padding: 8% 0 0 0;
   }
 }
 
@@ -407,7 +415,7 @@ body {
   .main__row {
     background: url("../img/main__bg.jpg") no-repeat right;
     background-size: 752px auto;
-    padding: 0px 0px 80px 0px;
+    padding: 8% 0 8% 0;
   }
 }
 
@@ -436,7 +444,6 @@ body {
 @media screen and (max-width: 2560px) {
   .main__title {
     width: 500px;
-    margin-top: 80px;
   }
 }
 
@@ -471,6 +478,12 @@ body {
   }
 }
 
+@media screen and (max-width: 576px) {
+  .main__title {
+    margin-top: 60px;
+  }
+}
+
 @media screen and (max-width: 432px) {
   .main__title {
     width: 100%;
@@ -487,9 +500,6 @@ body {
   margin-top: 22px;
   font-weight: 700;
   font-size: 40px;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
 }
 
 .main__text {
@@ -498,9 +508,6 @@ body {
   margin-top: 46px;
   font-size: 18px;
   line-height: 27px;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
 }
 
 @media screen and (max-width: 991px) {
@@ -650,7 +657,6 @@ body {
     display: inline-block;
     width: 400px;
     text-align: center;
-    margin-top: 30px;
   }
 }
 
@@ -869,7 +875,6 @@ body {
 
 .about {
   text-align: center;
-  margin-top: 80px;
 }
 
 @media screen and (max-width: 768px) {
@@ -886,6 +891,7 @@ body {
 }
 
 .about__img {
+  margin-top: 170px;
   width: 60px;
   display: inline-block;
   text-align: center;
@@ -986,6 +992,12 @@ body {
   margin-bottom: 70px;
 }
 
+@media screen and (max-width: 576px) {
+  .features {
+    margin-top: 30px;
+  }
+}
+
 .features__title {
   font-weight: 700;
   letter-spacing: 5px;
@@ -1037,34 +1049,49 @@ body {
 @media screen and (max-width: 1920px) {
   .support {
     background: url("../img/support__img.jpg") no-repeat right;
-    background-size: 800px auto;
-    padding: 230px 0px 230px 0px;
+    background-size: 800px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 14% 0 14% 0;
   }
 }
 
-@media screen and (max-width: 1370px) {
+@media screen and (max-width: 1480px) {
   .support {
-    background-size: 750px auto;
+    background-size: 750px;
+  }
+}
+
+@media screen and (max-width: 1360px) {
+  .support {
+    background-size: 650px;
   }
 }
 
 @media screen and (max-width: 1280px) {
   .support {
-    background-size: 650px 443px;
-    padding: 180px 0px 180px 0px;
+    background-size: 650px;
   }
 }
 
 @media screen and (max-width: 1160px) {
   .support {
-    background-size: 550px 383px;
+    background-size: 550px;
   }
 }
 
 @media screen and (max-width: 991px) {
   .support {
     background: none;
-    padding: 0px 0px 60px 0px;
+    padding: 5% 0 15% 0;
   }
 }
 
@@ -1095,7 +1122,7 @@ body {
   .support__row {
     background: url("../img/support__img.jpg") no-repeat right;
     background-size: 800px auto;
-    padding: 230px 0px 230px 0px;
+    padding: 16% 0 16% 0;
   }
 }
 
@@ -1117,9 +1144,6 @@ body {
 .support__title {
   font-weight: 700;
   font-size: 22px;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
 }
 
 @media screen and (max-width: 370px) {
@@ -1253,6 +1277,12 @@ body {
 @media screen and (max-width: 991px) {
   .contacts {
     height: 380px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .contacts {
+    margin-top: 30px;
   }
 }
 
